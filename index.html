@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your forensic science knowledge with this interactive pink-themed quiz.">
+  <title>Forensic Quiz | Pink Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Forensic Quiz home">
+        <span class="brand-icon">⌕</span>
+        <span>forensic<span class="brand-light">.quiz</span></span>
+      </a>
+      <span class="top-label"><span class="live-dot"></span> KNOWLEDGE LAB</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span>✦</span> THE FORENSIC CHALLENGE</div>
+      <h1>Think like a<br><em>forensic scientist.</em></h1>
+      <p class="hero-copy">Test your observation, investigation and scientific knowledge — one question at a time.</p>
+      <div class="hero-tags">
+        <span>⌁ 15 QUESTIONS</span>
+        <span>◷ SELF-PACED</span>
+        <span>✧ INSTANT RESULTS</span>
+      </div>
+    </section>
+
+    <section class="quiz-card" aria-live="polite">
+      <div id="start-screen" class="screen">
+        <div class="card-symbol">✧</div>
+        <p class="section-kicker">READY, DETECTIVE?</p>
+        <h2>Your case begins here.</h2>
+        <p class="muted">Explore fingerprints, DNA, ballistics, toxicology and crime scene investigation. Choose the best answer for each question.</p>
+        <div class="start-stats">
+          <div><strong>15</strong><span>Questions</span></div>
+          <div><strong>5</strong><span>Topics</span></div>
+          <div><strong>∞</strong><span>Time limit</span></div>
+        </div>
+        <button id="start-btn" class="primary-btn">Start the quiz <span>→</span></button>
+        <p class="tiny-note">No timer. Take your time and enjoy learning.</p>
+      </div>
+
+      <div id="quiz-screen" class="screen hidden">
+        <div class="quiz-meta">
+          <span id="question-count">QUESTION 01 / 15</span>
+          <span id="topic-label" class="topic-pill">FINGERPRINTS</span>
+        </div>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+        <h2 id="question-text" class="question-text"></h2>
+        <div id="answer-list" class="answer-list"></div>
+        <div id="feedback" class="feedback hidden" role="status"></div>
+        <div class="quiz-footer">
+          <span id="answered-count">0 of 15 answered</span>
+          <button id="next-btn" class="primary-btn next-btn" disabled>Next question <span>→</span></button>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen hidden">
+        <div class="result-icon">✦</div>
+        <p class="section-kicker">CASE COMPLETED</p>
+        <h2 id="result-heading">Well investigated!</h2>
+        <p class="muted" id="result-message">You have completed the forensic science challenge.</p>
+        <div class="score-circle">
+          <div><strong id="score-number">0/15</strong><span>YOUR SCORE</span></div>
+        </div>
+        <p class="result-percent" id="score-percent">0% accuracy</p>
+        <button id="restart-btn" class="primary-btn">Try again <span>↻</span></button>
+        <p class="tiny-note">Keep observing. Keep questioning. Keep learning.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>MADE FOR CURIOUS MINDS</span>
+      <span>✧ FORENSIC SCIENCE ✧</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
