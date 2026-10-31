@@ -137,4 +137,4 @@ function renderQuestion() {
   const q = questions[currentQuestion];
 
   document.getElementById("question-count").textContent =
-    `QUESTION $DIL0 / $DIL1`;
+    `QUESTION ${String(currentQuestion + 1).padStart(2, "0")} / ${questions.length}`;
